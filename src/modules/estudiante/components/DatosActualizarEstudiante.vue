@@ -1,48 +1,42 @@
 <template>
-    <label>Id:</label>
-  
-  <input v-model="id" type="text" />
-    <label>Cedula:</label>
-  
-    <input v-model="cedula" type="text" />
-  
-    <label>Nombre:</label>
-    <input v-model="nombre" type="text" />
-    <label>Apellido:</label>
-    <input v-model="apellido" type="text" />
-    <button @click="actualizarEstudiante">Actualizar</button>
-  </template>
+  <div class="container">
+    <p>Id: <input v-model="id" type="text" /></p>
+    <p>Cedula: <input v-model="cedula" type="text" /></p>
+    <p>Nombre: <input v-model="nombre" type="text" /></p>
+    <p>Apellido: <input v-model="apellido" type="text" /></p>
+    <button class="button" @click="actualizarEstudiante">Actualizar</button>
+  </div>
+</template>
   
   <script>
-  import { actualizarEstudianteFachada } from "../helpers/EstudianteCliente.js";
-  
-  export default {
-      data() {
-      return {
-        id: null,
-        cedula: null,
-        nombre: null,
-        apellido: null,
+import { actualizarEstudianteFachada } from "../helpers/EstudianteCliente.js";
+
+export default {
+  data() {
+    return {
+      id: null,
+      cedula: null,
+      nombre: null,
+      apellido: null,
+    };
+  },
+  methods: {
+    async actualizarEstudiante() {
+      const data = {
+        cedula: this.cedula,
+        nombre: this.nombre,
+        apellido: this.apellido,
+        provincia: "pichincha",
       };
+
+      await actualizarEstudianteFachada(data, this.id);
     },
-    methods: {
-      async actualizarEstudiante() {
-  
-          const data = {
-  
-              cedula : this.cedula,
-              nombre: this.nombre,
-              apellido: this.apellido, 
-              provincia: "pichincha",
-  
-          }
-  
-          await actualizarEstudianteFachada(data, this.id);
-       
-      },
-    },
-  };
-  </script>
-  
-  <style>
-  </style>
+  },
+};
+</script>
+
+<style scoped>
+.container {
+  margin-top: 100px;
+}
+</style>

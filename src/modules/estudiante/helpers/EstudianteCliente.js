@@ -18,8 +18,8 @@ export const actualizarEstudianteFachada = (bodyEstudiante, id) => {
     return actualizarEstudiante(bodyEstudiante,id);
 }
 
-export const eliminarEstudianteFachada = (id) => {
-    return eliminarEstudiante(id);
+export const eliminarEstudianteFachada = async (id) => {
+    return await eliminarEstudiante(id);
 
 }
 

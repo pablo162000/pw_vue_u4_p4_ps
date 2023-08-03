@@ -1,5 +1,5 @@
 <template>
-  <h1>Hola</h1>
+  <h1>Hola Bienvenido a el proceso de Matricula</h1>
 </template>
 
 <script>

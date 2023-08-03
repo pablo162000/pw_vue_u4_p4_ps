@@ -1,20 +1,19 @@
 <template>
-  <label>Cedula:</label>
+  <div class="container">
+    <p>Cedula: <input v-model="cedula" type="text" /></p>
+    <p>Nombre: <input v-model="nombre" type="text" /></p>
+    <p>Apellido: <input v-model="apellido" type="text" /></p>
 
-  <input v-model="cedula" type="text" />
-
-  <label>Nombre:</label>
-  <input v-model="nombre" type="text" />
-  <label>Apellido:</label>
-  <input v-model="apellido" type="text" />
-  <button @click="guardarEstudiante">Guardar</button>
+    
+    <button class="button" @click="guardarEstudiante">Guardar</button>
+  </div>
 </template>
 
 <script>
 import { ingresarEstudianteFachada } from "../helpers/EstudianteCliente.js";
 
 export default {
-    data() {
+  data() {
     return {
       cedula: null,
       nombre: null,
@@ -23,22 +22,21 @@ export default {
   },
   methods: {
     async guardarEstudiante() {
+      const data = {
+        cedula: this.cedula,
+        nombre: this.nombre,
+        apellido: this.apellido,
+        provincia: "pichincha",
+      };
 
-        const data = {
-
-            cedula : this.cedula,
-            nombre: this.nombre,
-            apellido: this.apellido, 
-            provincia: "pichincha",
-
-        }
-
-        await ingresarEstudianteFachada(data);
-     
+      await ingresarEstudianteFachada(data);
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
+.container {
+  margin-top: 100px;
+}
 </style>

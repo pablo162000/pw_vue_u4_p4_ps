@@ -1,15 +1,17 @@
 <template>
-  <input v-model="cedula" type="text" />
-  <button @click="consultarEstudiante">Consultar</button>
-  
+  <div class="container">
+    <p>Cedula:<input v-model="cedula" type="text" /> <button class="button" @click="consultarEstudiante">Consultar</button></p>
 
-  <label>Nombre:</label>
-  <input v-model="nombre" type="text">
-  <label>Apellido:</label>
-  <input v-model="apellido" type="text">
+    
+    
 
+    <div class="datos">
+      
+      <p>Nombre:<input v-model="nombre" type="text" /></p>
+      <p>Apellido:<input v-model="apellido" type="text" /></p>
 
-
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,13 +27,20 @@ export default {
   methods: {
     async consultarEstudiante() {
       const data = await obtenerEstudianteFachada(this.cedula);
-      this.nombre = data.nombre
-      this.apellido = data.apellido
-      console.log(data)
+      this.nombre = data.nombre;
+      this.apellido = data.apellido;
+      console.log(data);
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
+.container {
+  margin-top: 100px;
+}
+
+.datos {
+  
+}
 </style>
