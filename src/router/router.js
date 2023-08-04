@@ -11,7 +11,7 @@ const routes = [
         component: () => import('../modules/estudiante/pages/ActualizarEstudiante')
     },
     {
-        path: "/consultar",
+        path: "/consultar/:cedula",
         component: () => import('../modules/estudiante/pages/ConsultarEstudiante')
 
     },

@@ -23,6 +23,7 @@ export default {
       const data = await eliminarEstudianteFachada(this.id);
       this.nombre = data.nombre;
       this.mostrarNombre = true;
+      console.log("Se ha eliminado " + this.nombre)
     },
   },
 };

@@ -19,7 +19,7 @@ import { obtenerEstudianteFachada } from "../helpers/EstudianteCliente.js";
 export default {
   data() {
     return {
-      cedula: null,
+      cedula: this.$route.params.cedula,
       nombre: null,
       apellido: null,
     };
@@ -32,6 +32,24 @@ export default {
       console.log(data);
     },
   },
+  mounted(){
+    const {cedula} = this.$route.params;
+    console.log(cedula);
+   // this.cedula= cedula
+    this.consultarEstudiante()
+    const nom = this.$route.query.nombre;
+    const {nom1} =this.$route.query;
+    console.log( this.$route)
+
+    //Pathvariable
+    //http://localhost:8080/../estudiantes/:cedula
+    //Request Param
+    //http://localhost:8080/../estudiantes?provincia=pichincha&ciudad=quito
+    
+
+
+
+  }
 };
 </script>
 
