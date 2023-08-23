@@ -18,13 +18,28 @@ export default {
 
 <style scoped>
 
-div {
-  padding: 0 30px;
-
-}
-div a {
+* {
+  font-size: 18px;
+  text-decoration: none;
   font-weight: bold;
-  color: #42b983;
-  margin: 0 10px;
+  color: #ffcf0f;
+}
+a {
+  padding: 0px 70px;
+  top: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#1d6de4;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  border-bottom: 2px solid #1d6de4;
 }
 </style>

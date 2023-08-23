@@ -1,5 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
 
   <NavBar></NavBar>
   <router-view/>
@@ -19,16 +18,8 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  
-}
+<style >
+
 
 .button {
   position: relative;
@@ -74,6 +65,6 @@ h1{
 }
 
 body{
-  background-color: #111921 ;
+  background-color: #233b5d ;
 }
 </style>
