@@ -2,7 +2,9 @@
   <div class="container">
     <form class="form">
       <p type = "Cedula:"><input v-model="cedula" type="text" placeholder="Ingrese su cedula" /></p>
-      <button class="button" @click="consultarEstudiante">Consultar</button>
+      <button type="button" class="btn btn-success" @click="consultarEstudiante">Consultar</button>
+
+      
       <p type = "Nombre:"><input v-model="nombre" type="text" /></p>
       <p type = "Apellido:"> <input v-model="apellido" type="text" /></p>
       <p type = "Fecha de Nacimiento:">   <input v-model="fechaDeNacimiento"  type="text" /></p>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+
 import { obtenerEstudianteFachada } from "../helpers/EstudianteCliente.js";
 export default {
   data() {
@@ -94,32 +97,6 @@ input {
 input:focus {
     border-bottom: 2px solid #af412e;
     outline: none;
-}
-
-button {
-    width: auto;
-    height: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top:2px ;
-    margin-bottom: 2px;
-
-    background-color:#ffcf0f;
-
-    
-
-    font-size: 20px;
-    border: 2px solid #000;
-    border-radius: 5px;
-
-}
-
-button:hover {
-
-    color: rgb(255, 255, 255);
-    background-color: rgb(28, 158, 110);
-
-    
 }
 
 

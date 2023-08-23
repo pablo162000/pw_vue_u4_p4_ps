@@ -1,7 +1,12 @@
-<template>
+<template >
+  <NavBar ></NavBar>
 
-  <NavBar></NavBar>
-  <router-view/>
+<div class="p-3 mb-2 bg-primary text-white" >
+
+  <router-view />
+
+</div>
+
 
   
 </template>
@@ -19,6 +24,7 @@ export default {
 </script>
 
 <style >
+
 
 
 .button {

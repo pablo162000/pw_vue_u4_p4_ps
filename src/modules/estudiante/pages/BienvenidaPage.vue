@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    
 
 <h1>Hola Bienvenidos</h1>
   </div>
@@ -56,30 +57,6 @@ input:focus {
     outline: none;
 }
 
-button {
-    width: auto;
-    height: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top:2px ;
-    margin-bottom: 2px;
 
-    background-color:#ffcf0f;
-
-    
-
-    font-size: 20px;
-    border: 2px solid #000;
-    border-radius: 5px;
-
-}
-
-button:hover {
-
-    color: rgb(255, 255, 255);
-    background-color: rgb(28, 158, 110);
-
-    
-}
 
 </style>

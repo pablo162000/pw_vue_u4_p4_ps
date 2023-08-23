@@ -30,7 +30,7 @@
 
 <script>
 import { ingresarEstudianteFachada } from "../helpers/EstudianteCliente.js";
-
+import 'bootstrap/dist/css/bootstrap.css'
 export default {
   data() {
     return {
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style scoped>
+body{
+  background-color: #233b5d ;
+}
 .container {
   margin-top: 100px;
   display: flex;
